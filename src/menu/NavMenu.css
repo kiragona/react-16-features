@@ -1,0 +1,126 @@
+
+.arrow {
+    width: 100%;
+    background: #f0f0f0;
+    position: relative;
+    align-self: flex-end;
+    display: flex;
+    justify-content: flex-end;
+    padding-top: 10px;
+    padding-right: 10px;
+
+}
+
+.collapse-left {
+    width: 25px;
+    height: 25px;
+    top: 14px;
+    /* position: absolute;*/
+    left: 256px;
+    z-index: 10;
+    transition: all 1s ease;
+    cursor: pointer;
+}
+
+.item-icon {
+    width: 50px;
+    height: 50px;
+    padding: 5px;
+    border: 4px solid transparent;
+
+}
+
+
+.item-icon.selected {
+    border: 4px solid #53d2fa;
+}
+
+.collapse-right {
+    width: 25px;
+    height: 25px;
+    transform: rotate(180deg);
+    left: 10px;
+    top: 14px;
+    z-index: 10;
+    transition: all 1s ease;
+    cursor: pointer;
+}
+
+.collapse-holder {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
+
+.menu {
+    position: relative;
+    width: 335px;
+    background: #f0f0f0;
+    display: flex;
+    flex-direction: column;
+    transition: width 1s ease;
+    margin: 10px;
+    overflow: hidden;
+    overflow-y: auto;
+}
+
+.narrow-menu {
+    position: relative;
+    width: 88px;
+    background: #f0f0f0;
+    display: flex;
+    flex-direction: column;
+    transition: width 1s ease;
+    margin: 10px;
+    overflow: hidden;
+    overflow-y: auto;
+}
+.menu-item-holder {
+    display: flex;
+    padding: 10px;
+    height:70px;
+    cursor: pointer;
+
+}
+.menu-item-holder:hover {
+    background-color: #d2d2d2;
+}
+
+.menu-item {
+
+    color: #000000;
+    padding-left: 10px;
+    text-decoration: none;
+    white-space: nowrap;
+    font-size: 1.5rem;
+    line-height: 65px;
+    height:68px;
+}
+
+.menu-item a {
+    display: block;
+    color: #000000;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.menu-item a.active {
+    display: block;
+    color: white;
+    padding: 20px;
+    text-decoration: none;
+}
+
+.menu-item-holder .selected.menu-item,
+.menu-item-holder .selected.menu-item:hover {
+    border: 1px solid #53d2fa;
+    color: white;
+    height: 30px;
+}
+
+/*
+.menu-item-holder .menu-item:hover {
+    background-color: #d2d2d2;
+}
+*/
+

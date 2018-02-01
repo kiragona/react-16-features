@@ -51,17 +51,6 @@ class NavMenu extends Component {
     this.menuIdToPathMap.set(6, '/ssr')
     this.menuIdToPathMap.set(7, '/breakingChanges')
 
-    //
-    this.pathToMenuIdMap = new Map()
-    this.pathToMenuIdMap.set('/', 1)
-    this.pathToMenuIdMap.set('/fragment', 2)
-    this.pathToMenuIdMap.set('/errorHandling', 3)
-    this.pathToMenuIdMap.set('/portals', 4)
-    this.pathToMenuIdMap.set('/domAttributes', 5)
-    this.pathToMenuIdMap.set('/ssr', 6)
-    this.pathToMenuIdMap.set('/breakingChanges', 7)
-
-
     this.state = {
       selected: '/',
       collapsed: false

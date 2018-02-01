@@ -1,5 +1,6 @@
 {
   "name": "react-16-features",
+  "homepage": "httprs://github.com/kiragona/react-16-features",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -15,6 +16,8 @@
     "react-scripts": "1.1.0"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "serve": "react-scripts build && serve -s build",
@@ -22,6 +25,7 @@
     "eject": "react-scripts eject"
   },
   "devDependencies": {
+    "gh-pages": "^1.1.0",
     "serve": "^6.4.9"
   }
 }

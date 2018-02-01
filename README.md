@@ -37,6 +37,16 @@ Your app is ready to be deployed!
 
 ### `npm run serve`
 
-Creates an optimized production build  and serve it with a static server.
-site on the port 5000
+Creates an optimized production build  and serve it with a static server on the port 5000
 Open [http://localhost:5000](http://localhost:5000) to view it in the browser.
+
+
+<img src="docs/appSnapshot.png" width="650" height="350"/>
+
+
+### Navigation Instructions
+|                                                                    |                                                        |
+| ------------------------------------------------------------------ |:------------------------------------------------------:|
+| <img src="docs/Arrow_keys-LEFT_RIGHT.png" width="200" height="200">| use LEFT/RIGHT arrow keys to navigate through the menu |
+| <img src="docs/Arrow_keys-UP_DOWN.png" width="200" height="200">   | use UP/DOWN arrow keys to navigate inside main view    |
+

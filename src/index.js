@@ -1,12 +1,12 @@
 import React from 'react'
 import {render} from 'react-dom'
 import './index.css'
-
+import Prism from 'prismjs' //for code highliting, include once
 
 import App from './app/App'
 import {BrowserRouter} from 'react-router-dom'
 import registerServiceWorker from './registerServiceWorker'
-import Prism from 'prismjs'
+
 
 render((
   <BrowserRouter>
@@ -15,4 +15,4 @@ render((
 
 ), document.getElementById('root'))
 
-registerServiceWorker();
+registerServiceWorker()

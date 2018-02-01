@@ -1,7 +1,5 @@
-// The Header creates links that can be used to navigate
-// between routes.
+
 import React, {Component, Fragment} from 'react'
-import PropTypes from 'prop-types'
 import {withRouter} from 'react-router-dom'
 
 import {Link} from 'react-router-dom'
@@ -37,19 +35,67 @@ const MenuOption = withRouter(({...props, history}) => (
   </div>
 ))
 
-
-export default class NavMenu extends Component {
+class NavMenu extends Component {
 
   constructor(props) {
     super(props)
+    this.totalMenuNum = 7
+    this.curMenuNum = 1
+    //
+    this.menuIdToPathMap = new Map()
+    this.menuIdToPathMap.set(1, '/')
+    this.menuIdToPathMap.set(2, '/fragment')
+    this.menuIdToPathMap.set(3, '/errorHandling')
+    this.menuIdToPathMap.set(4, '/portals')
+    this.menuIdToPathMap.set(5, '/domAttributes')
+    this.menuIdToPathMap.set(6, '/ssr')
+    this.menuIdToPathMap.set(7, '/breakingChanges')
+
+    //
+    this.pathToMenuIdMap = new Map()
+    this.pathToMenuIdMap.set('/', 1)
+    this.pathToMenuIdMap.set('/fragment', 2)
+    this.pathToMenuIdMap.set('/errorHandling', 3)
+    this.pathToMenuIdMap.set('/portals', 4)
+    this.pathToMenuIdMap.set('/domAttributes', 5)
+    this.pathToMenuIdMap.set('/ssr', 6)
+    this.pathToMenuIdMap.set('/breakingChanges', 7)
+
+
     this.state = {
       selected: '/',
       collapsed: false
     }
   }
 
+
+  Nav2NexMenuItem = (event) => {
+    if (event.key === 'ArrowRight') {
+
+      this.curMenuNum = this.curMenuNum + 1
+
+      if (this.curMenuNum > this.totalMenuNum) {
+        this.curMenuNum = 1
+      }
+      this.handleNav(event, this.props.history, this.menuIdToPathMap.get(this.curMenuNum))
+    }
+
+    if (event.key === 'ArrowLeft') {
+      this.curMenuNum = this.curMenuNum - 1
+      if (this.curMenuNum < 1) {
+        this.curMenuNum = this.totalMenuNum
+      }
+      this.handleNav(event, this.props.history, this.menuIdToPathMap.get(this.curMenuNum))
+    }
+  }
+
   componentDidMount() {
-    this.handleNav(null, null, '/')
+    document.addEventListener('keydown', this.Nav2NexMenuItem)
+    this.handleNav(null, this.props.history, '/')
+  }
+
+  componentWillUnmount() {
+    document.removeEventListener('keydown', this.Nav2NexMenuItem)
   }
 
 
@@ -116,6 +162,8 @@ export default class NavMenu extends Component {
 
   }
 }
+
+export default withRouter(NavMenu)
 
 
 

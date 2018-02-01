@@ -100,9 +100,7 @@ export default class BreakingChanges extends Component {
               your deprecated code.
             </div>
           </div>
-
           }
-
 
           <div>
             <br/>

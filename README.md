@@ -33,20 +33,19 @@ The build is minified and the filenames include the hashes.<br>
 Your app is ready to be deployed!
 
 
-### Deploy to Static Server
+### Deploy to GitHub Pages
 
-### `npm run serve`
+### `npm run deploy`
+Deploys and enable to host project directly from a GitHub repository.
 
-Creates an optimized production build  and serve it with a static server on the port 5000
-Open [http://localhost:5000](http://localhost:5000) to view it in the browser.
+Open [https://kiragona.github.io/react-16-features/] to view it in the browser.
 
-
-<img src="docs/appSnapshot.png" width="650" height="350"/>
+<img src="docs/appSnapshot.png" />
 
 
 ### Navigation Instructions
 |                                                                    |                                                        |
 | ------------------------------------------------------------------ |:------------------------------------------------------:|
-| <img src="docs/Arrow_keys-LEFT_RIGHT.png" width="200" height="200">| use LEFT/RIGHT arrow keys to navigate through the menu |
-| <img src="docs/Arrow_keys-UP_DOWN.png" width="200" height="200">   | use UP/DOWN arrow keys to navigate inside main view    |
+| <img src="docs/Arrow_keys-LEFT_RIGHT.png" width="100" height="100">| use LEFT/RIGHT arrow keys to navigate through the menu |
+| <img src="docs/Arrow_keys-UP_DOWN.png" width="100" height="100">   | use UP/DOWN arrow keys to navigate inside main view    |
 

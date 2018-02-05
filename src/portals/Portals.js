@@ -317,8 +317,7 @@ export default class Portals extends Component {
             <div className='example-title'>Portal Use Cases : Modal</div>
             <div className='example-note'>&emsp;✔️&emsp; Sometimes it’s useful to insert a child into a different location in the DOM
               via Portals
-              <br/>&emsp;✔️&emsp; React does not create a new div. It renders the children into `domNode`. React does not create a new div. It renders
-              the children into `domNode`.
+              <br/>&emsp;✔️&emsp; React does not create a new div. It renders the children into `domNode`.
             </div>
             <div>
               <PortalRenderSnipet/>

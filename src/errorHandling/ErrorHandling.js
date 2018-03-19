@@ -56,7 +56,7 @@ class ErrorBoundary extends Component {
   }
 
   render() {
-    if (this.state.errorInfo) {
+    if (this.state.errorInfo || this.state.error) {
       // Error path
       return (
         <div className='error-component'>

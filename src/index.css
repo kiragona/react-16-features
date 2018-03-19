@@ -11,8 +11,6 @@ body {
     overflow: hidden;
 }
 
-
-
 .content {
     width: 78%;
     height: 100%;
@@ -55,8 +53,6 @@ body {
 
 }
 
-
-
 .example-title {
     margin-left: 10px;
     margin-top: 10px;
@@ -68,10 +64,10 @@ body {
     margin-left: 10px;
     margin-top: 5px;
 }
+
 .example-note-title {
     font-size: 19px;
 }
-
 
 .example-note-tab {
     margin-left: 60px;
@@ -80,7 +76,8 @@ body {
 .example-note-double-tab {
     margin-left: 90px;
 }
-.example-note-tab1{
+
+.example-note-tab1 {
     margin-left: 70px;
 }
 
@@ -157,7 +154,7 @@ pre[class*="language-"] {
 }
 
 .modal {
-    background-color: rgba(0,0,0,0.6);
+    background-color: rgba(0, 0, 0, 0.6);
     position: fixed;
     height: 100%;
     width: 100%;
@@ -191,7 +188,7 @@ pre.html-snipet.language-markup {
     font-size: 12px;
     top: 89px;
     bottom: 0;
-    border-radius: 1px !important ;
+    border-radius: 1px !important;
     box-shadow: 2px 2px #b5b5b5;
     width: 250px;
     right: 18px;
@@ -212,4 +209,11 @@ pre.html-snipet.language-markup {
     border: 1px solid #d2d2d2;
     padding: 10px;
     margin-left: 10px;
+}
+
+.strict-warning {
+    width: 50%;
+    height: 50%;
+    padding-left: 121px;
+    padding-top: 5px;
 }

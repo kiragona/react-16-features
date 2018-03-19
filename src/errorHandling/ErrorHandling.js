@@ -60,7 +60,7 @@ class ErrorBoundary extends Component {
       // Error path
       return (
         <div className='error-component'>
-          <div style={{fontWeight: 'bold', color: '#ff8300'}}>&emsp;🤔 &emsp;Something went wrong &emsp;🤔 &emsp;</div>
+          <div style={{fontWeight: 'bold', color: '#ff8300'}}>&emsp;<span>🤔</span> &emsp;Something went wrong &emsp;<span>🤔</span>&emsp;</div>
           &emsp;
           <details style={{margin: 10, marginTop: 0, whiteSpace: 'pre-wrap', lineHeight: '30px', paddingLeft: '15px'}}>
             {this.state.error && this.state.error.toString() }
@@ -241,18 +241,18 @@ export default class ErrorHandling extends Component {
         <div className='example'>
           <div className='example-title'>Error handling using Error boundaries</div>
           <br/>
-          <div className='example-note'>&emsp;✔️&emsp; Prior to React v16.0, any error in any part of the UI would crash the whole application
+          <div className='example-note'>&emsp;<span>✔</span>️&emsp; Prior to React v16.0, any error in any part of the UI would crash the whole application
           </div>
           <br/>
-          <div className='example-note'>&emsp;✔️&emsp; To handle this problem, <b>ErrorBoundary</b> concept was introduced in React v16.0</div>
+          <div className='example-note'>&emsp;<span>✔</span>️&emsp; To handle this problem, <b>ErrorBoundary</b> concept was introduced in React v16.0</div>
           <br/>
-          <div className='example-note'>&emsp;✔️&emsp; Only <b>class</b> components can be an Error Boundaries component</div>
+          <div className='example-note'>&emsp;<span>✔</span>️&emsp; Only <b>class</b> components can be an Error Boundaries component</div>
           <br/>
-          <div className='example-note'>&emsp;✔️&emsp;With <b>Error Boundaries</b>, each error occurs in any lifecycle method of <b>Child</b> is
+          <div className='example-note'>&emsp;<span>✔</span>️&emsp;With <b>Error Boundaries</b>, each error occurs in any lifecycle method of <b>Child</b> is
             caught by <b>Parent</b>
           </div>
           <br/>
-          <div className='example-note'>&emsp;✔️&emsp;Define a new lifecycle method called <b>componentDidCatch(error,info)</b> in <b>Parent</b> to be
+          <div className='example-note'>&emsp;<span>✔</span>️&emsp;Define a new lifecycle method called <b>componentDidCatch(error,info)</b> in <b>Parent</b> to be
             error
             boundaries and catch errors
           </div>
@@ -261,7 +261,7 @@ export default class ErrorHandling extends Component {
         {(this.state.exampleNumber === 2 ) &&
         <div className='example'>
           <div className='example-title'>ErrorBoundary component example</div>
-          <div className='example-note'>&emsp;✔️&emsp; Create a component once and call it everywhere it's needed in your
+          <div className='example-note'>&emsp;<span>✔</span>️&emsp; Create a component once and call it everywhere it's needed in your
             application
           </div>
           <ErrorBoundariesSnipet/>
@@ -271,7 +271,7 @@ export default class ErrorHandling extends Component {
         {(this.state.exampleNumber === 3 ) &&
         <div className='example'>
           <div className='example-title'>Buggy Counter</div>
-          <div className='example-note'>&emsp;✔️&emsp; When (counter === 5), <b>Buggy Counter</b> simulates an error
+          <div className='example-note'>&emsp;<span>✔</span>️&emsp; When (counter === 5), <b>Buggy Counter</b> simulates an error
           </div>
           <BuggyCounterSnipet/>
 

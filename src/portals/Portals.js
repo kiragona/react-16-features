@@ -1,6 +1,3 @@
-'use strict'
-
-
 import React, {Component, Fragment} from 'react'
 import ReactDOM from 'react-dom'
 
@@ -297,13 +294,13 @@ export default class Portals extends Component {
         <div className='example'>
           <div className='example-title'>Portals</div>
           <br/>
-          <div className='example-note'>&emsp;✔️&emsp; Normally, when you return an element from a component’s render method, it’s mounted into the
+          <div className='example-note'>&emsp;<span>✔</span>️&emsp; Normally, when you return an element from a component’s render method, it’s mounted into the
             DOM as a child of the nearest parent node
           </div>
           <div>
             <NormalSnipet/>
           </div>
-          <div className='example-note'>&emsp;✔️&emsp; <b>Portals</b> provide a first-class way to render children into a DOM node that exists outside
+          <div className='example-note'>&emsp;<span>✔</span>️&emsp; <b>Portals</b> provide a first-class way to render children into a DOM node that exists outside
             the DOM hierarchy of the parent component
           </div>
           <div>
@@ -315,19 +312,19 @@ export default class Portals extends Component {
           (this.state.exampleNumber === 2 ) &&
           <div className='example'>
             <div className='example-title'>Portal Use Cases : Modal</div>
-            <div className='example-note'>&emsp;✔️&emsp; Sometimes it’s useful to insert a child into a different location in the DOM
+            <div className='example-note'>&emsp;<span>✔</span>️&emsp; Sometimes it’s useful to insert a child into a different location in the DOM
               via Portals
-              <br/>&emsp;✔️&emsp; React does not create a new div. It renders the children into `domNode`.
+              <br/>&emsp;<span>✔</span>️&emsp; React does not create a new div. It renders the children into `domNode`.
             </div>
             <div>
               <PortalRenderSnipet/>
             </div>
-            <div className='example-note'>&emsp;✔️&emsp; Portals came along in React 16 to enable developers to render elements, in this case a modal,
+            <div className='example-note'>&emsp;<span>✔</span>️&emsp; Portals came along in React 16 to enable developers to render elements, in this case a modal,
               somewhere else, in this case up at a top layer component level
             </div>
             <br/>
             <div>
-              <img style={{marginLeft: 64, border: '2px solid #b5b5b5', width: '48%'}} src={portalDiagramImg}/>
+              <img style={{marginLeft: 64, border: '2px solid #b5b5b5', width: '48%'}} alt='diagram' src={portalDiagramImg}/>
             </div>
             <br/>
 
@@ -340,7 +337,7 @@ export default class Portals extends Component {
           <ModalSnipet/>
           <div style={{backgroundColor: '#fecece', position: 'absolute', display: 'flex', 'flex-direction' :'column', top: '70%', right: 13, border: '1px solid red', 'box-shadow': '2px 2px #fecece'}}>
             <div style={{paddingTop: 5, 'text-align': 'center', paddingBottom:5 }} >Why not <b>ReactDOM.render</b></div>
-            <img src={ModalWarning}/>
+            <img alt='warning' src={ModalWarning}/>
           </div>
         </div>
         }

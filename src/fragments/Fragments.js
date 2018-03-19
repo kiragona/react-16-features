@@ -142,10 +142,10 @@ export default class FragmentsExamples extends Component {
           (this.state.exampleNumber === 3 ) &&
           <div className='example'>
             <div className='example-title'>Fragments</div>
-            <div className='example-note'>&emsp;✔️&emsp; Starting with React 16.2.0, <b>fragment</b> syntax was added to JSX that doesn’t require keys
+            <div className='example-note'>&emsp;<span>✔</span>️&emsp; Starting with React 16.2.0, <b>fragment</b> syntax was added to JSX that doesn’t require keys
             </div>
-            <div className='example-note'>&emsp;✔️&emsp; Fragments look like empty <b>&lt;&gt;&lt;/&gt;</b> JSX tags.</div>
-            <div className='example-note'>&emsp;✔️&emsp; They let you group a list of children without adding extra nodes to the DOM</div>
+            <div className='example-note'>&emsp;<span>✔</span>️&emsp; Fragments look like empty <b>&lt;&gt;&lt;/&gt;</b> JSX tags.</div>
+            <div className='example-note'>&emsp;<span>✔</span>️&emsp; They let you group a list of children without adding extra nodes to the DOM</div>
             <FragmentExample/>
           </div>
         }
@@ -153,10 +153,10 @@ export default class FragmentsExamples extends Component {
           (this.state.exampleNumber === 4 ) &&
           <div className='example'>
             <div className='example-title'>Keyed Fragments</div>
-            <div className='example-note'>&emsp;✔️&emsp; Note that the <b>&lt;&gt;&lt;/&gt;</b> syntax does not accept attributes, including keys
+            <div className='example-note'>&emsp;<span>✔</span>️&emsp; Note that the <b>&lt;&gt;&lt;/&gt;</b> syntax does not accept attributes, including keys
             </div>
-            <div className='example-note'>&emsp;✔️&emsp; If you need a keyed fragment, you can use <b>&lt;Fragment /&gt;</b> directly</div>
-            <div className='example-note'>&emsp;✔️&emsp; A use case for this is mapping a collection to an array of fragments</div>
+            <div className='example-note'>&emsp;<span>✔</span>️&emsp; If you need a keyed fragment, you can use <b>&lt;Fragment /&gt;</b> directly</div>
+            <div className='example-note'>&emsp;<span>✔</span>️&emsp; A use case for this is mapping a collection to an array of fragments</div>
 
             <KeyedFragmentExample/>
           </div>

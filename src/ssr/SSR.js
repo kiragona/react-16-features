@@ -74,11 +74,11 @@ export default class SSR extends Component {
         <div className='example'>
           <div className='example-title'>Server Side Rendering</div>
           <br/>
-          <div className='example-note'>&emsp;✔️&emsp; React 16 includes a completely rewritten server renderer</div>
-          <div className='example-note'>&emsp;✔️&emsp; Server side rendering in React 16 supports <b>streaming</b>, that makes sending data from
+          <div className='example-note'>&emsp;<span>✔</span>️&emsp; React 16 includes a completely rewritten server renderer</div>
+          <div className='example-note'>&emsp;<span>✔</span>️&emsp; Server side rendering in React 16 supports <b>streaming</b>, that makes sending data from
             server to the client faster
           </div>
-          <div className='example-note'>&emsp;✔️&emsp;In React 16, there are two different methods for rendering on the client side: <i>render()</i>
+          <div className='example-note'>&emsp;<span>✔</span>️&emsp;In React 16, there are two different methods for rendering on the client side: <i>render()</i>
             and <i>hydrate()</i></div>
           <div className='example-note example-note-tab'><b>&emsp; render()</b> for rendering content solely on the client side</div>
           <div className='example-note example-note-tab'><b>&emsp; hydrate()</b> for rendering on top of server-side rendered markup.</div>
@@ -86,9 +86,9 @@ export default class SSR extends Component {
             <SSRHybradeSnipet/>
           </div>
           <div className='example-note example-note-tab1' style={{display: 'flex'}}>
-            <img className='ssr-warning-img' src={ssrWarning}/>
+            <img alt='warning' className='ssr-warning-img' src={ssrWarning}/>
           </div>
-          <div className='example-note'>&emsp;✔️&emsp;Finally, React 16 Just Faster</div>
+          <div className='example-note'>&emsp;<span>✔</span>️&emsp;Finally, React 16 Just Faster</div>
           <img className='ssr-performance-img' src={ssrPerformance}/>
         </div>
         }

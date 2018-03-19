@@ -16,7 +16,7 @@ body {
 .content {
     width: 78%;
     height: 100%;
-    overflow: auto;
+    overflow: hidden;
     position: relative;
     flex: 1;
     display: flex;
@@ -32,6 +32,7 @@ body {
     border: 1px solid #d2d2d2;
     margin-bottom: 20px;
     text-align: left;
+    overflow: auto;
 
 }
 
@@ -45,6 +46,16 @@ body {
     text-align: left;
 
 }
+
+.code-example {
+    display: flex;
+    position: relative;
+    margin-bottom: 20px;
+    text-align: left;
+
+}
+
+
 
 .example-title {
     margin-left: 10px;
@@ -73,7 +84,12 @@ body {
     margin-left: 70px;
 }
 
-
+.search-api-img {
+    width: 345px;
+    height: 300px;
+    padding-left: 25px;
+    padding-top: 10px;
+}
 
 pre[class*="language-"] {
 

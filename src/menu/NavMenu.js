@@ -1,5 +1,5 @@
 
-import React, {Component, Fragment} from 'react'
+import React, {Component} from 'react'
 import {withRouter} from 'react-router-dom'
 
 import {Link} from 'react-router-dom'
@@ -21,7 +21,7 @@ import './NavMenu.css'
 const ImgLink = withRouter(({...props, history}) => (
   <img onClick={() => {
     history.push(props.path)
-  }} title={props.title} src={props.imageSrc} className={props.imageClass}/>
+  }} alt={props.title} title={props.title} src={props.imageSrc} className={props.imageClass}/>
 ))
 
 const MenuOption = withRouter(({...props, history}) => (
@@ -106,7 +106,7 @@ class NavMenu extends Component {
     const classNamesFragmentsLink = classNames({'selected': this.state.selected === '/fragment', 'item-icon': true})
     const classNamesErrorsLink = classNames({'selected': this.state.selected === '/errorHandling', 'item-icon': true})
     const classNamesPortals = classNames({'selected': this.state.selected === '/portals', 'item-icon': true})
-    const classDomAttrs = classNames({'selected': this.state.selected === '/domAttributes', 'item-icon': true})
+    const classDomAttrs = classNames({'selected': this.state.selected === '/contextAPI', 'item-icon': true})
     const classSSR = classNames({'selected': this.state.selected === '/ssr', 'item-icon': true})
     const breakableSSR = classNames({'selected': this.state.selected === '/breakingChanges', 'item-icon': true})
 
@@ -115,7 +115,7 @@ class NavMenu extends Component {
     return (
       <div className={menuClass}>
         <div className='arrow'>
-          <img title={arrowAlt}
+          <img alt={arrowAlt} title={arrowAlt}
                onClick={() => {
                  this.setState({collapsed: !this.state.collapsed})
                }}
@@ -139,8 +139,8 @@ class NavMenu extends Component {
         <MenuOption handleNav={this.handleNav} imageClass={classNamesPortals} imageSrc={portalImg} path='/portals' title='Portals'
                     linkComponent={<Link to='/portals'>Portals</Link>}/>
 
-        <MenuOption handleNav={this.handleNav} imageClass={classDomAttrs} imageSrc={htmlTags} path='/domAttributes' title='DOM Attributes'
-                    linkComponent={<Link to='/domAttributes'>DOM Attributes</Link>}/>
+        <MenuOption handleNav={this.handleNav} imageClass={classDomAttrs} imageSrc={htmlTags} path='/contextAPI' title='New Context API'
+                    linkComponent={<Link to='/contextAPI'>New Context API</Link>}/>
 
         <MenuOption handleNav={this.handleNav} imageClass={classSSR} imageSrc={ssrImg} path='/ssr' title='Server Side Rendering'
                     linkComponent={<Link to='/ssr'>Server Side Rendering</Link>}/>

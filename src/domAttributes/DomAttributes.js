@@ -84,17 +84,17 @@ export default class DomAttributes extends Component {
         <div className='example' style={{flex: 1}}>
           <div className='example-title'>Dom Attributes in React 16</div>
           <br/>
-          <div className='example-note'>&emsp;✔️&emsp; In the past, React used to ignore unknown DOM attributes. If you wrote JSX with an attribute
+          <div className='example-note'>&emsp;<span>✔</span>️&emsp; In the past, React used to ignore unknown DOM attributes. If you wrote JSX with an attribute
             that React doesn’t recognize, React would just skip it
           </div>
           <br/>
           <CodeExampleSnipet/>
-          <div className='example-note'>&emsp;✔️&emsp; would render an empty div to the DOM with React 15:
+          <div className='example-note'>&emsp;<span>✔</span>️&emsp; would render an empty div to the DOM with React 15:
           </div>
           <br/>
           <React15Snipet/>
           <br/>
-          <div className='example-note'>&emsp;✔️&emsp; In React 16, we are making a change. Now, any unknown attributes will end up in the DOM
+          <div className='example-note'>&emsp;<span>✔</span>️&emsp; In React 16, we are making a change. Now, any unknown attributes will end up in the DOM
           </div>
           <br/>
           <React16Snipet/>

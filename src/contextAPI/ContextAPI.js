@@ -117,52 +117,59 @@ export default class ContextAPI extends Component {
   render() {
     return (
       <Fragment>
-        {(this.state.exampleNumber === 1) &&
+        <div style={{overflow: 'hidden', overflowY: 'auto'}} className='example'>
+          {(this.state.exampleNumber === 1) &&
 
-        <div className='example' style={{flex: 1}}>
-          <div className='example-title'>New Context API in React 16.3</div>
-          <br/>
-          <div className='example-note'>&emsp;<span>✔</span>️&emsp; Context API was always a thing of mystery...</div>
-          <img className='search-api-img' alt='Context API Search' src={contextAPISearchImg}/>
-          <br/>
-          <QuoteSnippet/>
-        </div>
-        }
-        {(this.state.exampleNumber === 2) &&
+          <div className='example' style={{flex: 1}}>
+            <div className='example-title'>New Context API in React 16.3</div>
+            <br/>
+            <div className='example-note'>&emsp;<span>✔</span>️&emsp; Context API was always a thing of mystery...</div>
+            <img className='search-api-img' alt='Context API Search' src={contextAPISearchImg}/>
+            <br/>
+            <QuoteSnippet/>
+          </div>
+          }
+          {(this.state.exampleNumber === 2) &&
 
-        <div className='example' style={{flex: 1}}>
-          <div className='example-title'>New Context API in React 16.3</div>
-          <br/>
-          <div className='example-note'>&emsp;<span>✔</span>️&emsp;RFC phase has passed and the new API is merged.</div>
-          <br/>
-          <div className='example-note'>&emsp;<span>✔</span>️&emsp;New API is more “user friendly” and useful for state management without the “overhead” of Redux or MobX.
-          </div>
-          <br/>
-          <div className='example-note'>&emsp;<span>✔</span>️&emsp;Creation of the new context via <span style={{fontWeight: 'bold'}}>React.createContext</span>
-          </div>
-          <div className='example-note example-note-tab1'>
-            <ContextAPICreateCodeSnippet/>
-          </div>
-          <div className='example-note'>&emsp;<span>✔</span>️&emsp;Calling the factory function will return an object that has a <span style={{fontWeight: 'bold'}}>“Provider”</span> and
-            a <span style={{fontWeight: 'bold'}}>“Consumer”.</span>
-          </div>
-          <div className='example-note'>&emsp;<span>✔</span>️&emsp;The “Provider” is a component that provides the data to all its sub-tree.
-          </div>
-          <div className='example-note'>&emsp;<span>✔</span>️&emsp;The “Consumer” uses the provided data thought the context.
-          </div>
-          <div className='example-note example-note-tab1'>
-            <div className='code-example'>
-              <div>
-                <ProviderSnippet/>
-              </div>
-              <div>
-                <ConsumerSnippet/>
+          <div className='example' style={{flex: 1}}>
+            <div className='example-title'>New Context API in React 16.3</div>
+            <br/>
+            <div className='example-note'>&emsp;<span>✔</span>️&emsp;RFC phase has passed and the new API is merged.
+            </div>
+            <br/>
+            <div className='example-note'>&emsp;<span>✔</span>️&emsp;New API is more “user friendly” and useful for
+              state management without the “overhead” of Redux or MobX.
+            </div>
+            <br/>
+            <div className='example-note'>&emsp;<span>✔</span>️&emsp;Creation of the new context via <span
+              style={{fontWeight: 'bold'}}>React.createContext</span>
+            </div>
+            <div className='example-note example-note-tab1'>
+              <ContextAPICreateCodeSnippet/>
+            </div>
+            <div className='example-note'>&emsp;<span>✔</span>️&emsp;Calling the factory function will return an object
+              that has a <span style={{fontWeight: 'bold'}}>“Provider”</span> and
+              a <span style={{fontWeight: 'bold'}}>“Consumer”.</span>
+            </div>
+            <div className='example-note'>&emsp;<span>✔</span>️&emsp;The “Provider” is a component that provides the
+              data to all its sub-tree.
+            </div>
+            <div className='example-note'>&emsp;<span>✔</span>️&emsp;The “Consumer” uses the provided data thought the
+              context.
+            </div>
+            <div className='example-note example-note-tab1'>
+              <div className='code-example'>
+                <div>
+                  <ProviderSnippet/>
+                </div>
+                <div>
+                  <ConsumerSnippet/>
+                </div>
               </div>
             </div>
           </div>
+          }
         </div>
-
-        }
       </Fragment>
     )
   }

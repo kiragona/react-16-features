@@ -34,6 +34,16 @@ body {
 
 }
 
+.example-no-border {
+    display: flex;
+    width: 100%;
+    position: relative;
+    flex-direction: column;
+    margin-bottom: 20px;
+    text-align: left;
+    overflow: auto;
+}
+
 .example-half {
     display: flex;
     width: 50%;

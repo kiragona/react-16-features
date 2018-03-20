@@ -47,7 +47,7 @@ class NavMenu extends Component {
     this.menuIdToPathMap.set(2, '/fragment')
     this.menuIdToPathMap.set(3, '/errorHandling')
     this.menuIdToPathMap.set(4, '/portals')
-    this.menuIdToPathMap.set(5, '/domAttributes')
+    this.menuIdToPathMap.set(5, '/contextAPI')
     this.menuIdToPathMap.set(6, '/ssr')
     this.menuIdToPathMap.set(7, '/breakingChanges')
 

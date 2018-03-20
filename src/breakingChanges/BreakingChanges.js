@@ -146,7 +146,7 @@ export default class BreakingChanges extends Component {
             }<br/>
 
             {(this.state.exampleNumber >= 11) &&
-            <div className='example-note'>&emsp;<span>✔</span>️️&emsp; <b>16.3.0 - New Components</b>
+            <div className='example-note'>&emsp;<span>✔</span>️️&emsp; <b>16.3.0 - New StrictMode Components</b>
             </div>
             }<br/>
 

@@ -60,10 +60,11 @@ class ErrorBoundary extends Component {
       // Error path
       return (
         <div className='error-component'>
-          <div style={{fontWeight: 'bold', color: '#ff8300'}}>&emsp;<span>🤔</span> &emsp;Something went wrong &emsp;<span>🤔</span>&emsp;</div>
+          <div style={{fontWeight: 'bold', color: '#ff8300'}}>&emsp;<span>🤔</span> &emsp;Something went wrong &emsp;
+            <span>🤔</span>&emsp;</div>
           &emsp;
           <details style={{margin: 10, marginTop: 0, whiteSpace: 'pre-wrap', lineHeight: '30px', paddingLeft: '15px'}}>
-            {this.state.error && this.state.error.toString() }
+            {this.state.error && this.state.error.toString()}
           </details>
         </div>
       )
@@ -194,7 +195,7 @@ export default class ErrorHandling extends Component {
 
   constructor(props) {
     super(props)
-    this.exampleCount = 5
+    this.exampleCount = 10
     this.curExampleNum = 1
     this.state = {
       exampleNumber: 1
@@ -237,62 +238,102 @@ export default class ErrorHandling extends Component {
   render() {
     return (
       <Fragment>
-        {(this.state.exampleNumber === 1 ) &&
-        <div className='example'>
+        <div style={{overflow: 'hidden', overflowY: 'auto'}} className='example'>
+          {(this.state.exampleNumber <= this.exampleCount) &&
           <div className='example-title'>Error handling using Error boundaries</div>
+          }<br/>
+
+          {(this.state.exampleNumber >= 2) && (this.state.exampleNumber !== 7 && this.state.exampleNumber !== 8 && this.state.exampleNumber !== 9 && this.state.exampleNumber !== 10 ) &&
+
+
+          <div className='example-note'>&emsp;<span>✔</span>️&emsp; Prior to React v16.0, any error in any part of the
+            UI would crash the whole application</div>
+
+
+          }
           <br/>
-          <div className='example-note'>&emsp;<span>✔</span>️&emsp; Prior to React v16.0, any error in any part of the UI would crash the whole application
-          </div>
+
+          {(this.state.exampleNumber >= 3) && (this.state.exampleNumber !== 7 && this.state.exampleNumber !== 8 && this.state.exampleNumber !== 9 && this.state.exampleNumber !== 10 ) &&
+
+          <div className='example-note'>&emsp;<span>✔</span>️&emsp; To handle this problem, <b>ErrorBoundary</b> concept
+            was introduced in React v16.0</div>
+
+          }
           <br/>
-          <div className='example-note'>&emsp;<span>✔</span>️&emsp; To handle this problem, <b>ErrorBoundary</b> concept was introduced in React v16.0</div>
+
+          {(this.state.exampleNumber >= 4) && (this.state.exampleNumber !== 7 && this.state.exampleNumber !== 8 && this.state.exampleNumber !== 9 && this.state.exampleNumber !== 10 ) &&
+
+
+          <div className='example-note'>&emsp;<span>✔</span>️&emsp; Only <b>class</b> components can be an Error
+            Boundaries component</div>
+
+          }
           <br/>
-          <div className='example-note'>&emsp;<span>✔</span>️&emsp; Only <b>class</b> components can be an Error Boundaries component</div>
-          <br/>
-          <div className='example-note'>&emsp;<span>✔</span>️&emsp;With <b>Error Boundaries</b>, each error occurs in any lifecycle method of <b>Child</b> is
+
+          {(this.state.exampleNumber >= 5) && (this.state.exampleNumber !== 7 && this.state.exampleNumber !== 8 && this.state.exampleNumber !== 9 && this.state.exampleNumber !== 10 ) &&
+
+
+          <div className='example-note'>&emsp;<span>✔</span>️&emsp;With <b>Error Boundaries</b>, each error occurs in
+            any lifecycle method of <b>Child</b> is
             caught by <b>Parent</b>
           </div>
+
+          }
           <br/>
-          <div className='example-note'>&emsp;<span>✔</span>️&emsp;Define a new lifecycle method called <b>componentDidCatch(error,info)</b> in <b>Parent</b> to be
+
+          {(this.state.exampleNumber >= 6) && (this.state.exampleNumber !== 7 && this.state.exampleNumber !== 8 && this.state.exampleNumber !== 9 && this.state.exampleNumber !== 10 ) &&
+
+          <div className='example-note'>&emsp;<span>✔</span>️&emsp;Define a new lifecycle method
+            called <b>componentDidCatch(error,info)</b> in <b>Parent</b> to be
             error
             boundaries and catch errors
           </div>
-        </div>
-        }
-        {(this.state.exampleNumber === 2 ) &&
-        <div className='example'>
-          <div className='example-title'>ErrorBoundary component example</div>
-          <div className='example-note'>&emsp;<span>✔</span>️&emsp; Create a component once and call it everywhere it's needed in your
-            application
+
+          }
+          <br/>
+
+
+          {(this.state.exampleNumber === 7) &&
+          <div className='example-no-border'>
+            <div className='example-title'>ErrorBoundary component example</div>
+            <div className='example-note'>&emsp;<span>✔</span>️&emsp; Create a component once and call it everywhere
+              it's needed in your
+              application
+            </div>
+            <ErrorBoundariesSnipet/>
           </div>
-          <ErrorBoundariesSnipet/>
-        </div>
-        }
+          }
 
-        {(this.state.exampleNumber === 3 ) &&
-        <div className='example'>
-          <div className='example-title'>Buggy Counter</div>
-          <div className='example-note'>&emsp;<span>✔</span>️&emsp; When (counter === 5), <b>Buggy Counter</b> simulates an error
+          {(this.state.exampleNumber === 8) &&
+          <div className='example-no-border'>
+            <div className='example-title'>Buggy Counter</div>
+
+            <div className='example-note'>&emsp;<span>✔</span>️&emsp; When (counter === 5), <b>Buggy
+              Counter</b> simulates an error
+            </div>
+            <BuggyCounterSnipet/>
+
           </div>
-          <BuggyCounterSnipet/>
+          }
 
+          {(this.state.exampleNumber === 9) &&
+
+          <div className='example-no-border'>
+            <div className='example-title'>Error Boundaries Usage Example</div>
+
+            <ErrorBoundariesExampleSnipet/>
+          </div>
+
+          }
+
+          {(this.state.exampleNumber === 10) &&
+          <div className='example-no-border'>
+            <div className='example-title'>Live Example</div>
+            <br/>
+            <ErrorBoundariesExample/>
+          </div>
+          }
         </div>
-        }
-
-        {(this.state.exampleNumber === 4 ) &&
-
-        <div className='example'>
-          <div className='example-title'>Error Boundaries Usage Example</div>
-          <ErrorBoundariesExampleSnipet/>
-        </div>
-
-        }
-
-        {(this.state.exampleNumber === 5 ) &&
-        <div className='example'>
-          <div className='example-title'>Live Example</div>
-          <ErrorBoundariesExample/>
-        </div>
-        }
       </Fragment>
     )
   }

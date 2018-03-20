@@ -217,7 +217,9 @@ class ModalUsageExample extends React.Component {
         <div className="modal">
           <div className='modal-container'>
             <h1>Modal Content is Here...</h1>
-            <div>With a portal, we can render content into a different part of the DOM, as if it were any other React child.</div>
+            <div>With a portal, we can render content into a different part of the DOM, as if it were any other React
+              child.
+            </div>
             <br/>
             <div>
               This is being rendered inside the #modal-container div.
@@ -247,7 +249,7 @@ export default class Portals extends Component {
 
   constructor(props) {
     super(props)
-    this.exampleCount = 4
+    this.exampleCount = 6
     this.curExampleNum = 1
     this.state = {
       exampleNumber: 1
@@ -290,67 +292,96 @@ export default class Portals extends Component {
   render() {
     return (
       <Fragment>
-        {(this.state.exampleNumber === 1 ) &&
-        <div className='example'>
-          <div className='example-title'>Portals</div>
-          <br/>
-          <div className='example-note'>&emsp;<span>✔</span>️&emsp; Normally, when you return an element from a component’s render method, it’s mounted into the
-            DOM as a child of the nearest parent node
+        <div style={{overflow: 'hidden', overflowY: 'auto'}} className='example'>
+          {(this.state.exampleNumber <= this.exampleCount) &&
+          <div className='example-no-border'>
+            <div style={{marginBottom: 10}} className='example-title'>Portals</div>
           </div>
+          }
+
+          {(this.state.exampleNumber >= 2) && (this.state.exampleNumber !== 4 && this.state.exampleNumber !== 5 && this.state.exampleNumber !== 6) &&
           <div>
-            <NormalSnipet/>
-          </div>
-          <div className='example-note'>&emsp;<span>✔</span>️&emsp; <b>Portals</b> provide a first-class way to render children into a DOM node that exists outside
-            the DOM hierarchy of the parent component
-          </div>
-          <div>
-            <PortalSnipet/>
-          </div>
-        </div>
-        }
-        {
-          (this.state.exampleNumber === 2 ) &&
-          <div className='example'>
-            <div className='example-title'>Portal Use Cases : Modal</div>
-            <div className='example-note'>&emsp;<span>✔</span>️&emsp; Sometimes it’s useful to insert a child into a different location in the DOM
-              via Portals
-              <br/>&emsp;<span>✔</span>️&emsp; React does not create a new div. It renders the children into `domNode`.
+            <br/>
+            <div className='example-note'>&emsp;<span>✔</span>️&emsp; Normally, when you return an element from a
+              component’s render method, it’s mounted into the
+              DOM as a child of the nearest parent node
             </div>
             <div>
-              <PortalRenderSnipet/>
+              <NormalSnipet/>
             </div>
-            <div className='example-note'>&emsp;<span>✔</span>️&emsp; Portals came along in React 16 to enable developers to render elements, in this case a modal,
-              somewhere else, in this case up at a top layer component level
-            </div>
+          </div>
+          }
+
+          {(this.state.exampleNumber >= 3) && (this.state.exampleNumber !== 4 && this.state.exampleNumber !== 5 && this.state.exampleNumber !== 6) &&
+          <div>
             <br/>
+            <div className='example-note'>&emsp;<span>✔</span>️&emsp; <b>Portals</b> provide a first-class way to render
+              children into a DOM node that exists outside
+              the DOM hierarchy of the parent component
+            </div>
             <div>
-              <img style={{marginLeft: 64, border: '2px solid #b5b5b5', width: '48%'}} alt='diagram' src={portalDiagramImg}/>
+              <PortalSnipet/>
             </div>
-            <br/>
-
           </div>
-        }
-        {(this.state.exampleNumber === 3 ) &&
-        <div className='example'>
-          <div className='example-title'>Implement Modal with <b>React Portal</b></div>
-          <HTMLSnipet/>
-          <ModalSnipet/>
-          <div style={{backgroundColor: '#fecece', position: 'absolute', display: 'flex', 'flex-direction' :'column', top: '70%', right: 13, border: '1px solid red', 'box-shadow': '2px 2px #fecece'}}>
-            <div style={{paddingTop: 5, 'text-align': 'center', paddingBottom:5 }} >Why not <b>ReactDOM.render</b></div>
-            <img alt='warning' src={ModalWarning}/>
+          }
+
+
+          {
+            (this.state.exampleNumber === 4) &&
+            <div className='example-no-border'>
+              <div className='example-title'>Portal Use Cases : Modal</div>
+              <div className='example-note'>&emsp;<span>✔</span>️&emsp; Sometimes it’s useful to insert a child into a
+                different location in the DOM
+                via Portals
+                <br/>&emsp;<span>✔</span>️&emsp; React does not create a new div. It renders the children into
+                `domNode`.
+              </div>
+              <div>
+                <PortalRenderSnipet/>
+              </div>
+              <div className='example-note'>&emsp;<span>✔</span>️&emsp; Portals came along in React 16 to enable
+                developers to render elements, in this case a modal,
+                somewhere else, in this case up at a top layer component level
+              </div>
+              <br/>
+              <div>
+                <img style={{marginLeft: 64, border: '2px solid #b5b5b5', width: '48%'}} alt='diagram'
+                     src={portalDiagramImg}/>
+              </div>
+              <br/>
+
+            </div>
+          }
+          {(this.state.exampleNumber === 5) &&
+          <div className='example-no-border'>
+            <div className='example-title'>Implement Modal with <b>React Portal</b></div>
+            <HTMLSnipet/>
+            <ModalSnipet/>
+            <div style={{
+              backgroundColor: '#fecece',
+              position: 'absolute',
+              display: 'flex',
+              'flex-direction': 'column',
+              top: '70%',
+              right: 13,
+              border: '1px solid red',
+              'box-shadow': '2px 2px #fecece'
+            }}>
+            </div>
           </div>
+          }
+
+
+          {(this.state.exampleNumber === 6) &&
+          <div className='example-no-border'>
+
+            <div className='example-title'>Modal Usage Example</div>
+            <ModalUsageSnipet/>
+            <ModalUsageExample/>
+          </div>
+
+          }
         </div>
-        }
-
-
-        {(this.state.exampleNumber === 4 ) &&
-        <div className='example'>
-          <div className='example-title'>Modal Usage Example</div>
-          <ModalUsageSnipet/>
-          <ModalUsageExample/>
-        </div>
-
-        }
       </Fragment>
     )
   }

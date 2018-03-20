@@ -74,7 +74,7 @@ export default class ContextAPI extends Component {
 
   constructor(props) {
     super(props)
-    this.exampleCount = 2
+    this.exampleCount = 7
     this.curExampleNum = 1
     this.state = {
       exampleNumber: 1
@@ -118,39 +118,61 @@ export default class ContextAPI extends Component {
     return (
       <Fragment>
         <div style={{overflow: 'hidden', overflowY: 'auto'}} className='example'>
-          {(this.state.exampleNumber === 1) &&
 
-          <div className='example' style={{flex: 1}}>
-            <div className='example-title'>New Context API in React 16.3</div>
-            <br/>
+          {(this.state.exampleNumber <= this.exampleCount) &&
+          <div className='example-title'>New Context API in React 16.3</div>
+          }<br/>
+
+          {(this.state.exampleNumber >= 2) && (this.state.exampleNumber !== 3) && (this.state.exampleNumber !== 4) && (this.state.exampleNumber !== 5) && (this.state.exampleNumber !== 6) &&  (this.state.exampleNumber !== 7)  &&
+
+          <div className='example-no-border' style={{flex: 1}}>
+
             <div className='example-note'>&emsp;<span>✔</span>️&emsp; Context API was always a thing of mystery...</div>
             <img className='search-api-img' alt='Context API Search' src={contextAPISearchImg}/>
             <br/>
             <QuoteSnippet/>
           </div>
           }
-          {(this.state.exampleNumber === 2) &&
 
-          <div className='example' style={{flex: 1}}>
-            <div className='example-title'>New Context API in React 16.3</div>
-            <br/>
+          {(this.state.exampleNumber >= 3) &&
+
+          <div className='example-no-border'>
             <div className='example-note'>&emsp;<span>✔</span>️&emsp;RFC phase has passed and the new API is merged.
             </div>
-            <br/>
-            <div className='example-note'>&emsp;<span>✔</span>️&emsp;New API is more “user friendly” and useful for
-              state management without the “overhead” of Redux or MobX.
-            </div>
-            <br/>
-            <div className='example-note'>&emsp;<span>✔</span>️&emsp;Creation of the new context via <span
-              style={{fontWeight: 'bold'}}>React.createContext</span>
-            </div>
-            <div className='example-note example-note-tab1'>
-              <ContextAPICreateCodeSnippet/>
-            </div>
+          
+          </div>
+          }
+
+
+          {(this.state.exampleNumber >= 4) &&
+          <div className='example-note'>&emsp;<span>✔</span>️&emsp;New API is more “user friendly” and useful for
+            state management without the “overhead” of Redux or MobX.
+          </div>
+          }
+          <br/>
+
+          {(this.state.exampleNumber >= 5) &&
+          <div className='example-note'>&emsp;<span>✔</span>️&emsp;Creation of the new context via <span
+            style={{fontWeight: 'bold'}}>React.createContext</span>
+          </div>
+          }
+          <br/>
+
+
+          {(this.state.exampleNumber >= 6) &&
+          <div>
             <div className='example-note'>&emsp;<span>✔</span>️&emsp;Calling the factory function will return an object
               that has a <span style={{fontWeight: 'bold'}}>“Provider”</span> and
               a <span style={{fontWeight: 'bold'}}>“Consumer”.</span>
             </div>
+            <div className='example-note example-note-tab1'>
+              <ContextAPICreateCodeSnippet/>
+            </div>
+          </div>
+          }
+
+          {(this.state.exampleNumber >= 7) &&
+          <div>
             <div className='example-note'>&emsp;<span>✔</span>️&emsp;The “Provider” is a component that provides the
               data to all its sub-tree.
             </div>
@@ -169,6 +191,7 @@ export default class ContextAPI extends Component {
             </div>
           </div>
           }
+
         </div>
       </Fragment>
     )

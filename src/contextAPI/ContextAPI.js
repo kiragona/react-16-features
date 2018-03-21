@@ -180,11 +180,11 @@ export default class ContextAPI extends Component {
               context.
             </div>
             <div className='example-note example-note-tab1'>
-              <div className='code-example'>
-                <div>
+              <div className='code-example' style={{marginLeft: -60}}>
+                <div style={{overflow: 'auto'}}>
                   <ProviderSnippet/>
                 </div>
-                <div>
+                <div style={{overflow: 'auto', widht: '60%'}}>
                   <ConsumerSnippet/>
                 </div>
               </div>

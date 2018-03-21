@@ -295,7 +295,7 @@ export default class Portals extends Component {
         <div style={{overflow: 'hidden', overflowY: 'auto'}} className='example'>
           {(this.state.exampleNumber <= this.exampleCount) &&
           <div className='example-no-border'>
-            <div style={{marginBottom: 10}} className='example-title'>Portals</div>
+            <div style={{marginBottom: 20}} className='example-title'>Portals</div>
           </div>
           }
 

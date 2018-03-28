@@ -137,7 +137,7 @@ export default class ContextAPI extends Component {
           {(this.state.exampleNumber >= 3) &&
 
           <div className='example-no-border'>
-            <div className='example-note'>&emsp;<span>✔</span>️&emsp;RFC phase has passed and the new API is merged.
+            <div className='example-note'>&emsp;<span>✔</span>️&emsp; RFC phase has passed and the new API is merged.
             </div>
           
           </div>
@@ -145,14 +145,14 @@ export default class ContextAPI extends Component {
 
 
           {(this.state.exampleNumber >= 4) &&
-          <div className='example-note'>&emsp;<span>✔</span>️&emsp;New API is more “user friendly” and useful for
+          <div className='example-note'>&emsp;<span>✔</span>️&emsp; New API is more “user friendly” and useful for
             state management without the “overhead” of Redux or MobX.
           </div>
           }
           <br/>
 
           {(this.state.exampleNumber >= 5) &&
-          <div className='example-note'>&emsp;<span>✔</span>️&emsp;Creation of the new context via <span
+          <div className='example-note'>&emsp;<span>✔</span>️&emsp; Creation of the new context via <span
             style={{fontWeight: 'bold'}}>React.createContext</span>
           </div>
           }
@@ -161,7 +161,7 @@ export default class ContextAPI extends Component {
 
           {(this.state.exampleNumber >= 6) &&
           <div>
-            <div className='example-note'>&emsp;<span>✔</span>️&emsp;Calling the factory function will return an object
+            <div className='example-note'>&emsp;<span>✔</span>️&emsp; Calling the factory function will return an object
               that has a <span style={{fontWeight: 'bold'}}>“Provider”</span> and
               a <span style={{fontWeight: 'bold'}}>“Consumer”.</span>
             </div>
@@ -173,10 +173,10 @@ export default class ContextAPI extends Component {
 
           {(this.state.exampleNumber >= 7) &&
           <div>
-            <div className='example-note'>&emsp;<span>✔</span>️&emsp;The “Provider” is a component that provides the
+            <div className='example-note'>&emsp;<span>✔</span>️&emsp; The “Provider” is a component that provides the
               data to all its sub-tree.
             </div>
-            <div className='example-note'>&emsp;<span>✔</span>️&emsp;The “Consumer” uses the provided data thought the
+            <div className='example-note'>&emsp;<span>✔</span>️&emsp; The “Consumer” uses the provided data thought the
               context.
             </div>
             <div className='example-note example-note-tab1'>

@@ -273,7 +273,7 @@ export default class ErrorHandling extends Component {
           {(this.state.exampleNumber >= 5) && (this.state.exampleNumber !== 7 && this.state.exampleNumber !== 8 && this.state.exampleNumber !== 9 && this.state.exampleNumber !== 10 ) &&
 
 
-          <div className='example-note'>&emsp;<span>✔</span>️&emsp;With <b>Error Boundaries</b>, each error occurs in
+          <div className='example-note'>&emsp;<span>✔</span>️&emsp; With <b>Error Boundaries</b>, each error occurs in
             any lifecycle method of <b>Child</b> is
             caught by <b>Parent</b>
           </div>
@@ -283,7 +283,7 @@ export default class ErrorHandling extends Component {
 
           {(this.state.exampleNumber >= 6) && (this.state.exampleNumber !== 7 && this.state.exampleNumber !== 8 && this.state.exampleNumber !== 9 && this.state.exampleNumber !== 10 ) &&
 
-          <div className='example-note'>&emsp;<span>✔</span>️&emsp;Define a new lifecycle method
+          <div className='example-note'>&emsp;<span>✔</span>️&emsp; Define a new lifecycle method
             called <b>componentDidCatch(error,info)</b> in <b>Parent</b> to be
             error
             boundaries and catch errors
